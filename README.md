@@ -1,18 +1,16 @@
-#!/bin/bash
-
-# Requisitos:
+# 🚀 Requisitos:
 # - El formulario web debe estar desarrollado en HTML y contener los campos necesarios.
 # - Se debe tener acceso a la API de Wolkvox para realizar solicitudes de inserción de datos.
 
-# Configuración:
+# ⚙️ Configuración:
 WOLKVOX_API_URL="https://crm.wolkvox.com/server/API/v2/custom/insert.php"
 WOLKVOX_API_TOKEN="1234567889090"
 
-# Función principal que realiza la inserción de datos en el CRM de Wolkvox.
+# 🛠️ Función principal que realiza la inserción de datos en el CRM de Wolkvox.
 function insert() {
     # Asegurarse de tener la URL del servidor Wolkvox y el token de acceso configurados correctamente.
     if [ -z "$WOLKVOX_API_URL" ] || [ -z "$WOLKVOX_API_TOKEN" ]; then
-        echo "Error: Configuración incompleta. Verifique la URL del servidor y el token de acceso."
+        echo "❌ Error: Configuración incompleta. Verifique la URL del servidor y el token de acceso."
         exit 1
     fi
 
@@ -44,8 +42,7 @@ function insert() {
                 "PeriodoAcademico": "2024.1"
             }
         }' "$WOLKVOX_API_URL"
-
 }
 
-# Llamada a la función insert al enviar el formulario, por ejemplo.
+# 🚀 Llamada a la función insert al enviar el formulario, por ejemplo.
 insert
